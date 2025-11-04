@@ -1,7 +1,5 @@
-class ListNode:
-    def __init__(self,val,next=None):
-        self.val = val
-        self.next = next
+from LinkedList.ListNode import ListNode
+
 values=[1,2,3,4,5,6,7,8,9,4]
 targetValue = 4
 head = ListNode(values[0])
