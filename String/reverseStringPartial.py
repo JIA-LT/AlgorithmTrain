@@ -16,9 +16,18 @@ class Solution:
             res[cur:cur + k] = so.reverse(res[cur:cur + k])
 
         return ''.join(res)
+    def reverse_v2(self, s: str,k: int) -> str:
+        p = 0
+        while p < len(s):
+            p2 = p + k
+            s= s[:p] + s[p:p+k][::-1] + s[p+k:]
+            p = p + 2* k
+        return s
 if __name__ == '__main__':
     s = "abcdefg"
     k = 2
     solution = Solution()
     res = solution.reverseString(s, k)
     print(res)
+    res_2 = solution.reverse_v2(s, k)
+    print(res_2)
